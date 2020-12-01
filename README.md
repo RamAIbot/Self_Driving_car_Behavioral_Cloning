@@ -16,7 +16,7 @@ to drive autonomously by controlling the steering angle alone with constant spee
 The car consists of 3 cameras in the front (i.e) left,center and right to collect the data. The car is driven accross the track with movement keys and the data is collected for 
 each frame.</p>
 
-<img src=" " alt="image"/>
+<img src="Capture2.JPG" alt="image"/>
 
 <p> The key idea here is that instead of using only the center camera images to calculate the steering angles (for which the data is significantly less and requires more driving), 
 we add or subtract some offest (in this case it is 0.2) to the steering angles for the left and right camera images. From the image above, we can see that for the right camera images
@@ -70,7 +70,7 @@ shuffled randomly for training with a batch size of 64. he final train MSE being
  <img src="Capture1.JPG" alt="testimage"/>
  <br/>
  
- <h1> Autonomous Mode </h1>
+ <h1> Autonomous Mode Testing</h1>
  
  ```
  Clone the Repository of Udacity Simulator and download the beta version for windows. The verion used here is Version 2
