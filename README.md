@@ -58,3 +58,42 @@ set is splitted using sklearn's train_test_split library with test size being 33
 shuffled randomly for training with a batch size of 64. he final train MSE being 0.0638, validation MSE being 0.0701 and test MSE being 0.069. </p>
 <br/>
 <img src="newtrain.JPG" alt="losscurve"/>
+<br/>
+<p> The key idea of the model architecure is that it used the images from 3 cameras to train the model weights. But while testing in autonomous mode it only used the data
+ from the center camera. </p>
+ <br/>
+ 
+ <h3> Training </h3>
+ <img src="Capture1.JPG" alt="training"/>
+ <br/>
+ <h3> Testing (Autonomous action)</h3>
+ <img src="Capture1.JPG" alt="testimage"/>
+ <br/>
+ 
+ <h1> Autonomous Mode </h1>
+ 
+ ```
+ Clone the Repository of Udacity Simulator and download the beta version for windows. The verion used here is Version 2
+ https://github.com/udacity/self-driving-car-sim.git
+ 
+ Install Tensorflow V2.3 and Keras version 2.4.3 or 2.3 in anaconda prompt
+ 
+ Activate the GPU in the prompt using the below command
+ conda activate tf-gpu
+ 
+ Install socketio,eventlet,PIL,Flask,BytesIO and moviepy in the prompt
+ 
+ Run the simulator in autonomous mode after selecting the desired track
+ python drive.py <modelfile.h5> <foldertorecord>
+ 
+ The model file and recording folder should be in the same directory as drive.py
+ 
+ Converting the images from drive.py recordings to video we use the below command.
+ python video.py run1
+ 
+ By default the fps is 60 which may be very fast. We can alter it to 48 fps as below
+ python video.py run1 --fps 48
+ 
+ ```
+ 
+ <p> The output vidoes are in the run1.mp4 for track 1 and run2.mp4 for track two in the repository for refernce. </p>
